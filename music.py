@@ -12,7 +12,7 @@ options.add_argument('--disable-gpu')
 
 driver = webdriver.Chrome(chrome_options=options)
 # 创建储存歌单的文件
-csv_file = open("playlist.csv", "w", encoding='GBK', newline='')
+csv_file = open("playlist.csv", "w", encoding='utf-8-sig', newline='')
 writer = csv.writer(csv_file)
 writer.writerow(['标题', '播放数', '链接'])
 # 解析每一页，直到下一页为空
